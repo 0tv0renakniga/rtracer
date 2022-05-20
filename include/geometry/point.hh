@@ -27,7 +27,7 @@ public:
 
         os << p.x<<", "<< p.y << ", " << p.z;
         return os;
-    }
+    }//
 
 private:
     double x,y,z;
