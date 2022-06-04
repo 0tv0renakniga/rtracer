@@ -29,6 +29,17 @@ public:
         return os;
     }//
 
+    //diff of points
+    point operator-(const point& other){
+        point result(x-other.x,y-other.y,z-other.z);
+        //result.z = this->z -other.z;
+        return result;
+
+    }
+    point operator+(const point& other){
+        point result(x-other.x,y-other.y,z-other.z);
+        return result;
+    } 
 private:
     double x,y,z;
 
