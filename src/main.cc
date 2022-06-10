@@ -1,5 +1,5 @@
 #include <iostream>
-#include "geometry/vector.hh"
+#include "geometry/ray.hh"
 int main(int argc,char* argv[]){
     std::cout<<"hello"<<std::endl;
     
@@ -24,5 +24,15 @@ int main(int argc,char* argv[]){
     std::cout<<"here is dot pro :"<< dot_product <<std::endl;
 
     std::cout<<"here is the mag of V1 :" << v2.mag() <<std::endl;
+    
+    geo::ray r1;
+    geo::ray r2(p2,v2);
+
+    std::cout<<"here is ray 1: "<< r2 << std::endl;
+    
+    
+    
+    
+    
     return 0;
 }

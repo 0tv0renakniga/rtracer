@@ -23,7 +23,7 @@ public:
 
     friend std::ostream& operator<< (std::ostream& os, const vector& v){
 
-        os << "V("<<v.v_<<")";
+        os << "V"<<v.v_;
         return os;
     }
     double dot(vector other){
@@ -45,6 +45,14 @@ public:
                          std::pow(v_.getz(),2));
     }
     
+
+    //add normailze
+    void norm(){
+        double m = mag();
+        v_.setx(v_.getx()/m);
+        v_.sety(v_.gety()/m);
+        v_.setz(v_.getz()/m);
+    }
 private:
     point v_;
 

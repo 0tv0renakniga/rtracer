@@ -25,7 +25,7 @@ public:
     //operator overload.. tell how to use defined operator
     friend std::ostream& operator<< (std::ostream& os, const point& p){
 
-        os << p.x<<", "<< p.y << ", " << p.z;
+        os <<"("<< p.x<<", "<< p.y << ", " << p.z<<")";
         return os;
     }//
 
