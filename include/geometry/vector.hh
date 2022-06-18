@@ -32,6 +32,17 @@ public:
                      v_.getz()*other.v_.getz();
         return res;                
     }
+    //add cross product
+    vector cross(vector v2){
+        vector res;
+        this->v_;
+        res.v_.setx(v_.gety()*v2.v_.getz()-v_.getz()*v2.v_.gety());
+        res.v_.sety(v_.getz()*v2.v_.getx()-v_.getx()*v2.v_.getz());
+        res.v_.setz(v_.getx()*v2.v_.gety()-v_.gety()*v2.v_.getx());
+        
+        return res;
+    }
+
     vector& operator*=(const double& scaler){
         v_.setx(v_.getx()*scaler);
         v_.sety(v_.gety()*scaler);
